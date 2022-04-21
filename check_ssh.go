@@ -42,10 +42,10 @@ func main() {
 			word := str[0:spaceIndex]
 
 			if word[1] == '1' && word[2] == '0' && word[3] == '.' {
-				exec.Command("kdialog", "--passivepopup", word[sOpenIndex+1:sCloseIndex]+" подключен по shh к Kiselev-suse").Output()
+				exec.Command("kdialog", "--passivepopup", word[sOpenIndex+1:sCloseIndex]+" подключен по shh к suse-pc").Output()
 
 				var b bytes.Buffer
-				b.WriteString(fmt.Sprintf(tm + " " + word[sOpenIndex+1:sCloseIndex] + " подключен по shh к Kiselev-suse\n"))
+				b.WriteString(fmt.Sprintf(tm + " " + word[sOpenIndex+1:sCloseIndex] + " подключен по shh к suse-pc\n"))
 				_, err = sshLog.Write(b.Bytes())
 				if err != nil {
 					fmt.Println("Не смогли записать в файл", err)
@@ -53,10 +53,10 @@ func main() {
 				}
 
 			} else if word[1] == '1' && word[2] == '9' && word[3] == '2' && word[4] == '.' {
-				exec.Command("kdialog", "--passivepopup", word[sOpenIndex+1:sCloseIndex]+" подключен по shh к Kiselev-suse").Output()
+				exec.Command("kdialog", "--passivepopup", word[sOpenIndex+1:sCloseIndex]+" подключен по shh к suse-pc").Output()
 
 				var b bytes.Buffer
-				b.WriteString(fmt.Sprintf(tm + " " + word[sOpenIndex+1:sCloseIndex] + " подключен по shh к Kiselev-suse\n"))
+				b.WriteString(fmt.Sprintf(tm + " " + word[sOpenIndex+1:sCloseIndex] + " подключен по shh к suse-pc\n"))
 				_, err = sshLog.Write(b.Bytes())
 				if err != nil {
 					fmt.Println("Не смогли записать в файл", err)
@@ -70,10 +70,10 @@ func main() {
 		if str[1] == '1' && str[2] == '0' && str[3] == '.' {
 			sOpenIndex := strings.Index(str, sOpen)
 			sCloseIndex := strings.Index(str, sClose)
-			exec.Command("kdialog", "--passivepopup", str[sOpenIndex+1:sCloseIndex]+" подключен по shh к Kiselev-suse").Output()
+			exec.Command("kdialog", "--passivepopup", str[sOpenIndex+1:sCloseIndex]+" подключен по shh к suse-pc").Output()
 
 			var b bytes.Buffer
-			b.WriteString(fmt.Sprintf(tm + " " + str[sOpenIndex+1:sCloseIndex] + " подключен по shh к Kiselev-suse\n"))
+			b.WriteString(fmt.Sprintf(tm + " " + str[sOpenIndex+1:sCloseIndex] + " подключен по shh к suse-pc\n"))
 			_, err = sshLog.Write(b.Bytes())
 			if err != nil {
 				fmt.Println("Не смогли записать в файл", err)
@@ -82,10 +82,10 @@ func main() {
 		} else if str[1] == '1' && str[2] == '9' && str[3] == '2' && str[4] == '.' {
 			sOpenIndex := strings.Index(str, sOpen)
 			sCloseIndex := strings.Index(str, sClose)
-			exec.Command("kdialog", "--passivepopup", str[sOpenIndex+1:sCloseIndex]+" подключен по shh к Kiselev-suse").Output()
+			exec.Command("kdialog", "--passivepopup", str[sOpenIndex+1:sCloseIndex]+" подключен по shh к suse-pc").Output()
 
 			var b bytes.Buffer
-			b.WriteString(fmt.Sprintf(tm + " " + str[sOpenIndex+1:sCloseIndex] + " подключен по shh к Kiselev-suse\n"))
+			b.WriteString(fmt.Sprintf(tm + " " + str[sOpenIndex+1:sCloseIndex] + " подключен по shh к suse-pc\n"))
 			_, err = sshLog.Write(b.Bytes())
 			if err != nil {
 				fmt.Println("Не смогли записать в файл", err)
